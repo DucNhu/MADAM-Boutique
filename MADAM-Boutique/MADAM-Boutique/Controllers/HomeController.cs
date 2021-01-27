@@ -11,16 +11,17 @@ namespace MADAM_Boutique.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IProductRepository _productRepository;
+        //private readonly IProductRepository _productRepository;
 
-        public HomeController(IProductRepository product)
-        {
-            _productRepository = product;
-        }
+        //public HomeController(IProductRepository product)
+        //{
+        //    _productRepository = product;
+        //}
         public ViewResult Index()
         {
             ViewBag.Title = "This is text View.Bag title in HomeController";
-            return View(_productRepository.Products);
+            //return View(_productRepository.Products);
+            return View();
         }
 
         public IActionResult Privacy()
@@ -34,6 +35,11 @@ namespace MADAM_Boutique.Controllers
         }
 
         public IActionResult _ContactUs()
+        {
+            return View();
+        }
+
+        public IActionResult Login_Register()
         {
             return View();
         }
