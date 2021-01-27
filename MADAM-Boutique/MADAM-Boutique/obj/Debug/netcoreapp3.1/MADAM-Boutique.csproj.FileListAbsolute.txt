@@ -275,3 +275,6 @@ C:\Users\Pc\Documents\GitHub\ASP-NhuHoangMinhDuc\MADAM-Boutique\MADAM-Boutique\M
 C:\Users\Pc\Documents\GitHub\ASP-NhuHoangMinhDuc\MADAM-Boutique\MADAM-Boutique\MADAM-Boutique\obj\Debug\netcoreapp3.1\MADAM-Boutique.pdb
 C:\Users\Pc\Documents\GitHub\ASP-NhuHoangMinhDuc\MADAM-Boutique\MADAM-Boutique\MADAM-Boutique\obj\Debug\netcoreapp3.1\MADAM-Boutique.genruntimeconfig.cache
 C:\Users\Pc\Documents\GitHub\ASP-NhuHoangMinhDuc\MADAM-Boutique\MADAM-Boutique\MADAM-Boutique\obj\Debug\netcoreapp3.1\Razor\Views\Home\_Footer.cshtml.g.cs
+C:\Users\Pc\Documents\GitHub\ASP-NhuHoangMinhDuc\MADAM-Boutique\MADAM-Boutique\MADAM-Boutique\obj\Debug\netcoreapp3.1\Razor\Views\Home\_header.cshtml.g.cs
+C:\Users\Pc\Documents\GitHub\ASP-NhuHoangMinhDuc\MADAM-Boutique\MADAM-Boutique\MADAM-Boutique\obj\Debug\netcoreapp3.1\Razor\Views\Home\_AboutUs.cshtml.g.cs
+C:\Users\Pc\Documents\GitHub\ASP-NhuHoangMinhDuc\MADAM-Boutique\MADAM-Boutique\MADAM-Boutique\obj\Debug\netcoreapp3.1\Razor\Views\Home\_ContactUs.cshtml.g.cs

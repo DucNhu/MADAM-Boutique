@@ -28,6 +28,21 @@ namespace MADAM_Boutique.Controllers
             return View();
         }
 
+        public IActionResult _AboutUs()
+        {
+            return View();
+        }
+
+        public IActionResult _ContactUs()
+        {
+            return View();
+        }
+
+        public IActionResult _ProductDetail()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

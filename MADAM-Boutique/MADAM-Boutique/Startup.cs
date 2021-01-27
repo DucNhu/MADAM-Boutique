@@ -1,4 +1,5 @@
 using MADAM_Boutique.Data;
+using MADAM_Boutique.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;

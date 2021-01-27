@@ -3,4 +3,15 @@
 }
 <h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+@*@model IEnumerable<Product>
+
+    <b>
+        @foreach(var test in Model)
+        {
+        <p>
+            @test.ProductName <br />
+            @test.Description <br />
+        </p>
+
+        }
+    </b>*@

@@ -71,6 +71,7 @@ a#scrollUp i{
 	z-index: 10;
 	width: 100%;
 	background: white;
+	max-height: 12rem;
 }
 .header_top {
   background: none repeat scroll 0 0 #F0F0E9;
@@ -571,7 +572,9 @@ ul.sub-menu {
 /*************************
 ******* Home ******
 **************************/
-
+main {
+	padding-top: 23rem
+}
 
 .box__banner--img {
 	background: no-repeat center/cover url("/images//home//bannerGirl.jpg");
@@ -889,7 +892,7 @@ h2.title {
 }
 
 .product-overlay {
-	background #46433f61;
+	background: #46433f61;
 	top: 0;
 	display: none;
 	height: 0;
@@ -897,7 +900,6 @@ h2.title {
 	transition: height 500ms ease 0s;
 	width: 100%;
 	display: block;
-	opacity:;
 }
 
 .single-products:hover .product-overlay {
