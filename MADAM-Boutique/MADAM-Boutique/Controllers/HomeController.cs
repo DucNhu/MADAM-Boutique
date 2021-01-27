@@ -11,16 +11,16 @@ namespace MADAM_Boutique.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly IProductRepository _productRepository;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(IProductRepository product)
         {
-            _logger = logger;
+            _productRepository = product;
         }
-
-        public IActionResult Index()
+        public ViewResult Index()
         {
-            return View();
+            ViewBag.Title = "This is text View.Bag title in HomeController";
+            return View(_productRepository.Products);
         }
 
         public IActionResult Privacy()

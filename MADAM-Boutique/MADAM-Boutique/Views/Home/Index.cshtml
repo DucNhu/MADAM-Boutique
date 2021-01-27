@@ -1,7 +1,17 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+@using MADAM_Boutique.Models
+@model IEnumerable<Product>
+<h1>Render Data by Db</h1>
+@{
+    foreach(var item in Model)
+    {
+        <p>OK dc r</p>
+       <img src="https://kenh14cdn.com/thumb_w/620/2020/6/5/006mrmprly1gdx6exf3lyj30u01rcasm-15913263980501789002707-crop-15913264120321997228444.jpg" />
+    }
 
+} 
 <section id="banner">
     <!--slider-->
     <div class="row mb-2 mx-0">
@@ -795,3 +805,4 @@
     </section>
 
 </div>
+
