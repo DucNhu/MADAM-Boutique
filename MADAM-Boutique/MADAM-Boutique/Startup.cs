@@ -1,4 +1,4 @@
-using MADAM_Boutique.Data;
+//using MADAM_Boutique.Data;
 using MADAM_Boutique.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -28,13 +28,20 @@ namespace MADAM_Boutique
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+            //services.AddDbContext<ApplicationDbContext>(options =>
+            //    options.UseSqlServer(
+            //        Configuration.GetConnectionString("DefaultConnection")));
+            //services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            //    .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
+            services.AddDbContext<AppDbContext>(opts =>
+            {
+                opts.UseSqlServer(Configuration["ConnectionStrings:MADAMConnection"]);
+            });
+            services.AddScoped<IProductRepository, EFAppRepository>();
             services.AddRazorPages();
+            services.AddDistributedMemoryCache();
+            services.AddSession();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -53,6 +60,8 @@ namespace MADAM_Boutique
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseStatusCodePages();
+            app.UseDeveloperExceptionPage();
 
             app.UseRouting();
 
@@ -64,6 +73,7 @@ namespace MADAM_Boutique
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapDefaultControllerRoute();
                 endpoints.MapRazorPages();
             });
         }
