@@ -285,3 +285,5 @@ C:\Users\Pc\Documents\GitHub\ASP-NhuHoangMinhDuc\MADAM-Boutique\MADAM-Boutique\M
 C:\Users\Pc\Documents\GitHub\ASP-NhuHoangMinhDuc\MADAM-Boutique\MADAM-Boutique\MADAM-Boutique\obj\Debug\netcoreapp3.1\MADAM-Boutique.genruntimeconfig.cache
 C:\Users\Pc\Documents\GitHub\ASP-NhuHoangMinhDuc\MADAM-Boutique\MADAM-Boutique\MADAM-Boutique\obj\Debug\netcoreapp3.1\MADAM-Boutique.csprojAssemblyReference.cache
 C:\Users\Pc\Documents\GitHub\ASP-NhuHoangMinhDuc\MADAM-Boutique\MADAM-Boutique\MADAM-Boutique\obj\Debug\netcoreapp3.1\Razor\Views\Home\ProductSummary.cshtml.g.cs
+C:\Users\Pc\Documents\GitHub\ASP-NhuHoangMinhDuc\MADAM-Boutique\MADAM-Boutique\MADAM-Boutique\obj\Debug\netcoreapp3.1\Razor\Views\Home\Cart.cshtml.g.cs
+C:\Users\Pc\Documents\GitHub\ASP-NhuHoangMinhDuc\MADAM-Boutique\MADAM-Boutique\MADAM-Boutique\obj\Debug\netcoreapp3.1\Razor\Views\Home\_Checkout.cshtml.g.cs

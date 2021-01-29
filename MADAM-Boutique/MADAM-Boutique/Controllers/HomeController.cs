@@ -54,6 +54,11 @@ namespace MADAM_Boutique.Controllers
         {
             return View();
         }
+        public IActionResult _Checkout()
+        {
+            return View();
+        }
+        
         
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
