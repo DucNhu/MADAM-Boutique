@@ -51,7 +51,6 @@
 
 
     <main role="main" class="pb-3" id="main">
-        <partial name="Privacy" />
         @RenderBody()
     </main>
     @* Footer *@
@@ -80,7 +79,6 @@
             let main = document.querySelector("#main");
             var heightHeader = elmnt.offsetHeight;
             main.style.paddingTop = heightHeader + "px";
-            console.log("OK")
         }
         myFunction();
     </script>

@@ -23,7 +23,7 @@ namespace MADAM_Boutique
             Configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
+        public IConfiguration Configuration { get; set; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -61,7 +61,7 @@ namespace MADAM_Boutique
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseStatusCodePages();
-            app.UseDeveloperExceptionPage();
+            app.UseSession();
 
             app.UseRouting();
 
@@ -76,6 +76,7 @@ namespace MADAM_Boutique
                 endpoints.MapDefaultControllerRoute();
                 endpoints.MapRazorPages();
             });
+            SeedData.EnsurePopulated(app);
         }
     }
 }

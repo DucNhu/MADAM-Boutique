@@ -585,6 +585,8 @@ abbr[title], abbr[data-original-title] {
     text-transform: uppercase
 }
 
+.border-0 {border: none !important}
+
 blockquote {
     padding: 10px 20px;
     margin: 0 0 20px;
@@ -2095,7 +2097,6 @@ textarea.input-lg {
     vertical-align: middle;
     cursor: pointer;
     background-image: none;
-    border: 1px solid transparent;
     border-radius: 4px;
     -webkit-user-select: none;
     -moz-user-select: none;
