@@ -41,7 +41,7 @@ namespace MADAM_Boutique.Migrations
 
             modelBuilder.Entity("MADAM_Boutique.Models.Product", b =>
                 {
-                    b.Property<int>("ProductID")
+                    b.Property<long>("ProductID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);

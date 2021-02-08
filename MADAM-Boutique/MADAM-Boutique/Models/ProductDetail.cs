@@ -6,10 +6,9 @@ using MADAM_Boutique.Models;
 
 namespace MADAM_Boutique.Models
 {
-    public interface IProductRepository
+    public class ProductDetail
     {
-        IQueryable<Product> Products { get; }
+        public Product product { get; set; }
 
     }
-    
 }

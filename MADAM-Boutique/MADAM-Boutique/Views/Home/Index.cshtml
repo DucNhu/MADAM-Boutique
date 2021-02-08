@@ -20,20 +20,16 @@
                     <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2021/1/28/3b9ec26d-f907-4bfa-87c7-4e0f0fa960ef1611846109323-cat-fest-men-casual-dk--1-.jpg" class="d-block w-100" alt="...">
                 </div>
             </div>
-            <div class="carousel-caption d-none d-md-block">
+            @*<div class="carousel-caption d-none d-md-block">
                 <h5>First slide label</h5>
                 <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </div>
+            </div>*@
         </div>
         <div class="carousel-item" data-interval="3000">
             <div class="box__slider--img">
                 <div>
                     <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2021/1/28/4544db5f-085d-46f1-97d2-ea03f6e458221611847642885-Footwear-Fest_dk.jpg" class="d-block w-100" alt="...">
                 </div>
-            </div>
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Second slide label</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
         </div>
         <div class="carousel-item" data-interval="3000">
@@ -42,20 +38,12 @@
                     <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2021/1/28/faf764db-8b4e-4bd6-9632-f242757933d31611848689159-Biba_Desktop_Banner.jpg" class="d-block w-100" alt="...">
                 </div>
             </div>
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Third slide label</h5>
-                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-            </div>
         </div>
         <div class="carousel-item" data-interval="3000">
             <div class="box__slider--img">
                 <div>
                     <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2021/1/28/d79cc7ac-2e8f-4c64-af23-b6b3a763df4f1611848689124-Zivame_Desktop_Banner.jpg" class="d-block w-100" alt="...">
                 </div>
-            </div>
-            <div class="carousel-caption d-none d-md-block">
-                <h5>four slide label</h5>
-                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
             </div>
         </div>
     </div>
@@ -225,10 +213,16 @@
                                 <div class="product-image-wrapper">
                                     <div class="single-products">
                                         <div class="productinfo text-center">
-                                            <img src="https://s.memehay.com/files/posts/20200815/c89f38734abc934ee14714241362d36canh-co-gai-liem-mep.jpg" alt="@product.ImagePath" />
-                                            <h2>@product.UnitPrice $</h2>
-                                            <p>@product.ProductName</p>
-                                            <form id="@product.ProductID" asp-page="/Cart" method="post" class="btn btn-default ">
+                                            <div class="box__product--img">
+                                                <div>
+                                                    <a href="productDetail/@product.ProductID"><img src="/images/shop/@product.ImagePath" alt="@product.ImagePath" /></a>
+                                                </div>
+                                            </div>
+                                            <a href="#">
+                                                <h2>@product.UnitPrice $</h2>
+                                                <p>@product.ProductName</p>
+                                            </a>
+                                            <form id="@product.ProductID" asp-page="/Cart" method="post" class="btn">
                                                 <input type="hidden" asp-for="@product.ProductID" />
 
                                                 <button type="submit" class="btn add-to-cart">

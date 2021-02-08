@@ -1,5 +1,6 @@
 ﻿using MADAM_Boutique.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -13,11 +14,11 @@ namespace MADAM_Boutique.Controllers
     {
         private readonly IProductRepository _productRepository;
 
-        public HomeController(IProductRepository product)
+     
+        public HomeController(IProductRepository productRepository)
         {
-            _productRepository = product;
+            _productRepository = productRepository;
         }
-
         public ViewResult Index()
         {
             ViewBag.Title = "This is text View.Bag title in HomeController";
@@ -45,10 +46,7 @@ namespace MADAM_Boutique.Controllers
             return View();
         }
 
-        public IActionResult _ProductDetail()
-        {
-            return View();
-        }
+      
 
         public IActionResult _Product()
         {
@@ -58,8 +56,18 @@ namespace MADAM_Boutique.Controllers
         {
             return View();
         }
-        
-        
+
+
+
+
+
+        public IActionResult _ProductDetail(Product product)
+        {
+            var test = _productRepository.Products.Where(p => p.ProductID == product.ProductID).FirstOrDefault();
+            return View(test);
+        }
+
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
