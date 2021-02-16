@@ -78,6 +78,19 @@ namespace MADAM_Boutique
                     "productDetail/{productId:int}",
                     new { Controller = "Home", action = "_ProductDetail", productId = 1 });
 
+                endpoints.MapControllerRoute("catepage",
+            "{category}/Page{productPage:int}",
+            new { Controller = "Home", action = "Index", x = 1 });
+
+
+                endpoints.MapControllerRoute("page",
+                "Page{productPage:int}",
+                new { Controller = "Home", action = "Index", x = 1 });
+
+                endpoints.MapControllerRoute("pagination",
+                "Product/Page{productPage}",
+                new { Controller = "Home", action = "Index", x = 1 });
+
                 endpoints.MapDefaultControllerRoute();
                 endpoints.MapRazorPages();
             });

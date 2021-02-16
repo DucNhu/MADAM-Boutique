@@ -30,7 +30,7 @@ namespace MADAM_Boutique.Migrations
                     Description = table.Column<string>(maxLength: 10000, nullable: false),
                     ImagePath = table.Column<string>(nullable: true),
                     UnitPrice = table.Column<double>(nullable: true),
-                    CategoryID = table.Column<int>(nullable: true)
+                    Category = table.Column<string>(maxLength: 100, nullable: false),
                 },
                 constraints: table =>
                 {
@@ -46,7 +46,7 @@ namespace MADAM_Boutique.Migrations
             //migrationBuilder.CreateIndex(
             //    name: "IX_Products_CategoryID",
             //    table: "Products",
-            //    column: "CategoryID");
+            //    column: "Category");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

@@ -7,24 +7,36 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using MADAM_Boutique.Models.ViewModels;
 
 namespace MADAM_Boutique.Controllers
 {
     public class HomeController : Controller
     {
         private readonly IProductRepository _productRepository;
+        public int PageSize = 4;
 
-     
         public HomeController(IProductRepository productRepository)
         {
             _productRepository = productRepository;
         }
-        public ViewResult Index()
-        {
-            ViewBag.Title = "This is text View.Bag title in HomeController";
-            return View(_productRepository.Products);
-            //return View();
-        }
+        public ViewResult Index(string category, int ProductPage = 1)
+            => View(new ProductsListViewModel
+            {
+                Products = _productRepository.Products
+                .Where(p => category == null || p.Category == category)
+                .OrderBy(p => p.ProductID)
+                .Skip((ProductPage - 1) * PageSize)
+                .Take(PageSize),
+                PagingInfo = new PagingInfo
+                {
+                    CurrentPage = ProductPage,
+                    ItemsPerPage = PageSize,
+                    TotalItems = category == null ?
+                    _productRepository.Products.Count() :
+                    _productRepository.Products.Where(e => e.Category == category).Count()
+                }
+            });
 
         public IActionResult Privacy()
         {
@@ -46,7 +58,7 @@ namespace MADAM_Boutique.Controllers
             return View();
         }
 
-      
+
 
         public IActionResult _Product()
         {

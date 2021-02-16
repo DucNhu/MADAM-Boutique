@@ -31,6 +31,6 @@ namespace MADAM_Boutique.Models
         public string ImagePath { get; set; }
 
         public double UnitPrice { get; set; }
-        public int CategoryID { get; set; }
+        public string Category { get; set; }
     }   
 }

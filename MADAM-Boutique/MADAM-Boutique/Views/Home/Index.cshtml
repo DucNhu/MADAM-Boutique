@@ -1,10 +1,7 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
-
-
-@model IQueryable<Product>
+﻿@model ProductsListViewModel
 @* Slider *@
+
+
 <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -21,9 +18,9 @@
                 </div>
             </div>
             @*<div class="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </div>*@
+                    <h5>First slide label</h5>
+                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                </div>*@
         </div>
         <div class="carousel-item" data-interval="3000">
             <div class="box__slider--img">
@@ -59,7 +56,7 @@
                         <h2>Category</h2>
                         <div class="panel-group category-products" id="accordian">
                             <!--category-productsr-->
-                            <div class="panel panel-default">
+                            @*<div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
                                         <a data-toggle="collapse" data-parent="#accordian" href="#sportswear">
@@ -127,42 +124,13 @@
                                         </ul>
                                     </div>
                                 </div>
-                            </div>
+                            </div>*@
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h4 class="panel-title"><a href="#">Kids</a></h4>
+                                    <h4 class="panel-title"><vc:navigation-menu /></h4>
                                 </div>
                             </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title"><a href="#">Fashion</a></h4>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title"><a href="#">Households</a></h4>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title"><a href="#">Interiors</a></h4>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title"><a href="#">Clothing</a></h4>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title"><a href="#">Bags</a></h4>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title"><a href="#">Shoes</a></h4>
-                                </div>
-                            </div>
+                           
                         </div>
                         <!--/category-products-->
 
@@ -207,47 +175,10 @@
                         <!--features_items-->
                         <h2 class="title text-center">Features Items</h2>
 
-                        @foreach (var product in Model)
+                        @foreach (var product in Model.Products)
                         {
-                            <div class="col-sm-4">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <div class="box__product--img">
-                                                <div>
-                                                    <a href="productDetail/@product.ProductID"><img src="/images/shop/@product.ImagePath" alt="@product.ImagePath" /></a>
-                                                </div>
-                                            </div>
-                                            <a href="#">
-                                                <h2>@product.UnitPrice $</h2>
-                                                <p>@product.ProductName</p>
-                                            </a>
-                                            <form id="@product.ProductID" asp-page="/Cart" method="post" class="btn">
-                                                <input type="hidden" asp-for="@product.ProductID" />
-
-                                                <button type="submit" class="btn add-to-cart">
-                                                    <i class="fa fa-shopping-cart"></i>Add to cart
-                                                </button>
-                                            </form>
-                                        </div>
-                                        @*<div class="product-overlay">
-                                                <div class="overlay-content">
-                                                    <h2>@product.UnitPrice.ToString("c")</h2>
-                                                    <p>@product.ProductName</p>
-
-                                                </div>
-                                            </div>*@
-                                    </div>
-                                    <div class="choose">
-                                        <ul class="nav nav-pills nav-justified">
-                                            <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-                                            <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                        }
+                            <partial name="components/ProductSummary" model="product" />
+                            }
 
                     </div>
                     <!--features_items-->
@@ -696,6 +627,6 @@
             </div>
         </div>
     </section>
-
 </div>
+
 

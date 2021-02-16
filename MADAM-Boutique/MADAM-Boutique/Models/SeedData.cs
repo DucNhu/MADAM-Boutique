@@ -44,19 +44,19 @@ namespace MADAM_Boutique.Models
                 context.Products.AddRange(
                     new Product
                     {
-                        ProductName = "Áo Phông",
+                        ProductName = "Áo Phông 2",
                         Description = "Trông đẹp :))",
                         ImagePath = "ao_phong.jpg",
                         UnitPrice = 22.50,
-                        CategoryID = 1
+                        Category = "category2"
                     },
                 new Product
                 {
-                    ProductName = "Áo Khoác",
+                    ProductName = "Áo Khoác 2",
                     Description = "Đẹp",
                     ImagePath = "ao_khoac.jpg",
                     UnitPrice = 15.95,
-                    CategoryID = 1
+                    Category = "category3"
                 },
                 new Product
                 {
@@ -64,7 +64,7 @@ namespace MADAM_Boutique.Models
                     Description = "Đẹp too :))",
                     ImagePath = "ao_khoac_2.jpg",
                     UnitPrice = 32.99,
-                    CategoryID = 1
+                    Category = "category1"
                 },
                 new Product
                 {
@@ -72,7 +72,7 @@ namespace MADAM_Boutique.Models
                     Description = "So đẹp",
                     ImagePath = "ao_somi_1.jpg",
                     UnitPrice = 14.95,
-                    CategoryID = 1
+                    Category = "category1"
                 },
                 new Product
                 {
@@ -80,7 +80,7 @@ namespace MADAM_Boutique.Models
                     Description = "So đẹp",
                     ImagePath = "ao_somi_2.jpg",
                     UnitPrice = 14.95,
-                    CategoryID = 1
+                    Category = "category1"
                 },
                 new Product
                 {
@@ -88,7 +88,7 @@ namespace MADAM_Boutique.Models
                     Description = "Cute",
                     ImagePath = "quan_jean_1.jpg",
                     UnitPrice = 35.00,
-                    CategoryID = 2
+                    Category = "category1"
                 },
                 new Product
                 {
@@ -96,7 +96,7 @@ namespace MADAM_Boutique.Models
                     Description = "Thanh Lịch",
                     ImagePath = "quan_vai.jpg",
                     UnitPrice = 14.95,
-                    CategoryID = 2
+                    Category = "category1"
                 },
                 new Product
                 {
@@ -104,7 +104,7 @@ namespace MADAM_Boutique.Models
                     Description = "Cá Tính",
                     ImagePath = "quan_short.jpg",
                     UnitPrice = 12.95,
-                    CategoryID = 2
+                    Category = "category1"
                 },
                 new Product
                 {
@@ -112,7 +112,7 @@ namespace MADAM_Boutique.Models
                     Description = "Trẻ trung",
                     ImagePath = "quan_kaki.jpg",
                     UnitPrice = 22.95,
-                    CategoryID = 2
+                    Category = "category1"
                 });
                 context.SaveChanges();
             }

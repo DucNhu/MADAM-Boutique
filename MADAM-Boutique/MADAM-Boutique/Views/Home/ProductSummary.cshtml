@@ -1,14 +1,14 @@
-﻿@model ProductDetail
+﻿@model Product
 
     <div class="col-sm-4">
         <div class="product-image-wrapper">
             <div class="single-products">
                 <div class="productinfo text-center">
-                    <img src="@Model.product.ImagePath" alt="@Model.product.ImagePath" />
-                    <h2>@Model.product.UnitPrice $</h2>
-                    <p>@Model.product.ProductName</p>
-                    <form id="@Model.product.ProductID" asp-page="/Cart" method="post" class="btn btn-default border-0">
-                        <input type="hidden" asp-for="product.ProductID" />
+                    <img src="@Model.ImagePath" alt="@Model.ImagePath" />
+                    <h2>@Model.UnitPrice $</h2>
+                    <p>@Model.ProductName</p>
+                    <form id="@Model.ProductID" asp-page="/Cart" method="post" class="btn btn-default border-0">
+                        <input type="hidden" asp-for="@Model.ProductID" />
                         <button type="submit" class="btn add-to-cart">
                             <i class="fa fa-shopping-cart"></i>Add to cart
                         </button>
@@ -16,9 +16,9 @@
                 </div>
                 <div class="product-overlay">
                     <div class="overlay-content">
-                        <h2>@Model.product.UnitPrice.ToString("c")</h2>
-                        <p>@Model.product.ProductName</p>
-                        <form id="@Model.product.ProductID" asp-page="/Cart" method="post" class="btn btn-default ">
+                        <h2>@Model.UnitPrice.ToString("c")</h2>
+                        <p>@Model.ProductName</p>
+                        <form id="@Model.ProductID" asp-page="/Cart" method="post" class="btn btn-default ">
                             <button type="submit" class="btn add-to-cart">
                                 <i class="fa fa-shopping-cart"></i>Add to cart
                             </button>

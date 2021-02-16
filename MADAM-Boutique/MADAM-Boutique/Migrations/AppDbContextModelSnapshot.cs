@@ -46,9 +46,7 @@ namespace MADAM_Boutique.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("CategoryID")
-                        .HasColumnType("int");
-
+                    
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)")
@@ -63,21 +61,25 @@ namespace MADAM_Boutique.Migrations
                         .HasMaxLength(100);
 
                     b.Property<double?>("UnitPrice")
-                        .HasColumnType("float");
+                        .HasColumnType("double");
 
+                    
+
+                    //b.HasIndex("Category");
+                    b.Property<string>("Category")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
                     b.HasKey("ProductID");
-
-                    b.HasIndex("CategoryID");
-
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("MADAM_Boutique.Models.Product", b =>
-                {
-                    b.HasOne("MADAM_Boutique.Models.Category", "Category")
-                        .WithMany("Products")
-                        .HasForeignKey("CategoryID");
-                });
+            //modelBuilder.Entity("MADAM_Boutique.Models.Product", b =>
+            //    {
+            //        b.HasOne("MADAM_Boutique.Models.Category", "Category")
+            //            .WithMany("Products")
+            //            .HasForeignKey("Category");
+            //    });
 #pragma warning restore 612, 618
         }
     }
