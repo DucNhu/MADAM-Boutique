@@ -177,9 +177,13 @@
 
                         @foreach (var product in Model.Products)
                         {
-                            <partial name="components/ProductSummary" model="product" />
-                            }
+                    <partial name="components/ProductSummary" model="product" />}
 
+                        <div page-model="@Model.PagingInfo" page-action="Index" class="col-12 box-pageLink btn-group"
+                             Page-Classes-Enabled="true" Page-Class="bg-secondary text-white p-3 border rounded"
+                             Page-Class-Selected=""
+                             page-url-category="@Model.CurrentCategory"
+                             Page-Class-Normal="bg-white text-dark"></div>
                     </div>
                     <!--features_items-->
                     <!--category-tab-->

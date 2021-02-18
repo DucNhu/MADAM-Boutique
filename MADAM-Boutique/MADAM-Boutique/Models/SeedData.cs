@@ -10,24 +10,6 @@ namespace MADAM_Boutique.Models
 {
     public static class SeedData
     {
-        //private static List<Category> GetCategories()
-        //{
-        //    var categories = new List<Category> {
-        //        new Category
-        //        {
-        //            CategoryID = 1,
-        //            CategoryName = "Áo"
-        //        },
-        //        new Category
-        //        {
-        //            CategoryID = 2,
-        //            CategoryName = "Quần"
-        //        }
-        //    };
-
-        //    return categories;
-        //}
-
 
         public static void EnsurePopulated(IApplicationBuilder app)
         {
