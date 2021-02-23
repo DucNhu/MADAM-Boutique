@@ -15,6 +15,7 @@ namespace MADAM_Boutique.Controllers
     {
         private readonly IProductRepository _productRepository;
         public int PageSize = 4;
+        private readonly Cart _service;
 
         public HomeController(IProductRepository productRepository)
         {
@@ -70,7 +71,20 @@ namespace MADAM_Boutique.Controllers
         }
 
 
+        // Delete Product in Cart
+        //public IActionResult Delete(int id)
+        //{
+        //    var b = _service.Get(id);
+        //    if (b == null) return NotFound();
+        //    else return View(b);
+        //}
 
+        [HttpPost]
+        public IActionResult Delete(Product product)
+        {
+            _service.RemoveLine(product);
+            return RedirectToAction("Index");
+        }
 
 
         public IActionResult _ProductDetail(Product product)

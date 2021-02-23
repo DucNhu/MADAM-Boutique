@@ -20,38 +20,12 @@
     <link rel="stylesheet" href="~/resetCss/reset.css" />
 </head>
 <body>
-    
-    @*<header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-                <div class="container">
-                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">MADAM_Boutique</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                        <partial name="_LoginPartial" />
-                        <ul class="navbar-nav flex-grow-1">
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>*@
-
-
-    <!--header-->
     <partial name="_Header" />
     <!--/header-->
 
 
 
-    <main role="main" class="pb-3" id="main">
+    <main role="main" class="pb-3">
         @RenderBody()
     </main>
     @* Footer *@
@@ -64,14 +38,12 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
 
-    <script src="/js/contact.js"></script>
     @*<script src="/js/gmaps.js"></script>*@
-    <script src="/js/html5shiv.js"></script>
-    <script src="/js/jquery.js"></script>
-    <script src="/js/price-range.js"></script>
-    <script src="/js/jquery.prettyPhoto.js"></script>
-    <script src="/js/main.js"></script>
-    <script src="/js/jquery.scrollUp.min.js"></script>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/price-range.js"></script>
+    <script src="./js/jquery.prettyPhoto.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/jquery.scrollUp.min.js"></script>
     @RenderSection("Scripts", required: false)
 
     <script>

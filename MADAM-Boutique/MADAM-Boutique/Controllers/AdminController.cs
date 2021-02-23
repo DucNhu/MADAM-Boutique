@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MADAM_Boutique.Controllers
 {
-    public class ProductController : Controller
+    public class AdminController : Controller
     {
         public IActionResult Index()
         {

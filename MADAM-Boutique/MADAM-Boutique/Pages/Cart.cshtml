@@ -1,6 +1,7 @@
-﻿
-@page
-@model CartModel
+﻿@page
+@model MADAM_Boutique.Pages.CartModel
+
+
 <section id="cart_items">
     <div class="container">
         <div class="breadcrumbs">
@@ -14,7 +15,7 @@
                 <thead>
                     <tr class="cart_menu">
                         <td class="image">Item</td>
-                        <td class="description">description</td>
+                        <td class="description"></td>
                         <td class="price">Price</td>
                         <td class="quantity">Quantity</td>
                         <td class="total">Total</td>
@@ -22,37 +23,62 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var cart in Model.cart.Lines)
+                    @foreach (var line in Model.Cart.Lines)
                     {
-                    }
-                    @*@foreach (var cart in Model.cart.Lines)
-                        {
                         <tr>
-
+                            <td class="cart_product">
+                                <a href=""><img src="/images/shop/@line.Product.ImagePath" alt="@line.Product.ImagePath" width="110" height="110"></a>
+                            </td>
                             <td class="cart_description">
-                                <h4><a href="">Colorblock Scuba</a></h4>
-                                <p>ID: @cart.Product.ProductName</p>
+                                <h4><a href="">@line.Product.ProductName</a></h4>
+                                <p>Web ID: @line.CartLineID</p>
                             </td>
                             <td class="cart_price">
-                                <p>$@cart.Product.UnitPrice</p>
+                                <p>@line.Product.UnitPrice.ToString("c")</p>
+
                             </td>
                             <td class="cart_quantity">
-                                <div class="cart_quantity_button">
-                                    <p>@cart.Quantity</p>
+                                <div class="cart_quantity_button d-flex">
+                                    <button type="button" class="quantity-input-up"> + </button>
+                                    <input class="cart_quantity_input border-0" type="text" id="quantity" value="@line.Quantity" autocomplete="off" size="2">
+                                    <button type="button" class="quantity-input-down"> - </button>
                                 </div>
                             </td>
                             <td class="cart_total">
-                                <p class="cart_total_price">@((cart.Quantity * cart.Product.UnitPrice).ToString())</p>
+                                <p class="cart_total_price">@((line.Quantity * line.Product.UnitPrice).ToString("c"))</p>
                             </td>
                             <td class="cart_delete">
-                                <a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
+                                <form  asp-page="/Cart" method="post">
+                                    <input type="hidden" asp-for="@line.Product" />
+                                    <button type="submit" class="btn cart_quantity_delete">
+                                        <i class="fa fa-times"></i>
+                                    </button> |
+                                </form>
+                                
                             </td>
                         </tr>
-                        }*@
-
+                    }
 
                 </tbody>
             </table>
         </div>
     </div>
 </section> <!--/#cart_items-->
+
+<script>
+    $(function () {
+        $(".quantity-input-up").click(function () {
+            var inpt = $(this).parents().find($('input#quantity'));
+            var val = parseInt(inpt.val());
+            inpt.val(val + 1);
+        });
+        $(".quantity-input-down").click(function () {
+            var inpt = $(this).parents().find($('input#quantity'));
+            var val = parseInt(inpt.val());
+            if (val < 0) inpt.val(val = 0);
+            if (val == 0) return;
+            inpt.val(val - 1);
+        });
+    });
+</script>
+

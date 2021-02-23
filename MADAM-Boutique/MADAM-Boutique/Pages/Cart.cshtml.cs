@@ -18,23 +18,23 @@ namespace MADAM_Boutique.Pages
             repository = repo;
         }
 
-        public Cart cart { get; set; }
+        public Cart Cart { get; set; }
 
         public string ReturnUrl { get; set; }
 
         public void OnGet(string returUrl)
         {
             ReturnUrl = returUrl ?? "/";
-            cart = HttpContext.Session.GetJson<Cart>("cart") ?? new Cart();
+            Cart = HttpContext.Session.GetJson<Cart>("cart") ?? new Cart();
         }
 
         public IActionResult Onpost(long productId, string returnUrl)
         {
             Product product = repository.Products
-                .FirstOrDefault(p => p.ProductID == productId);
-            cart = HttpContext.Session.GetJson<Cart>("cart") ?? new Cart();
-            cart.AddItems(product, 1);
-            HttpContext.Session.SetJson("cart", cart);
+            .FirstOrDefault(p => p.ProductID == productId);
+            Cart = HttpContext.Session.GetJson<Cart>("cart") ?? new Cart();
+            Cart.AddItems(product, 1);
+            HttpContext.Session.SetJson("cart", Cart);
             return RedirectToPage(new { returnUrl = returnUrl });
         }
     }

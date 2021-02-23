@@ -26,8 +26,15 @@ using MADAM_Boutique.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "C:\Users\Pc\Documents\GitHub\ASP-NhuHoangMinhDuc\MADAM-Boutique\MADAM-Boutique\MADAM-Boutique\Pages\_ViewImports.cshtml"
+using MADAM_Boutique.Infrastructure;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2bbd2644f30cebfa8181bf842cc0a4412701e491", @"/Pages/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"03a0368e52a14e8342a13aeebe40bcc1cc6e9413", @"/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"80519bc4b6837b842bf944656465daea53a02dbd", @"/Pages/_ViewImports.cshtml")]
     public class Pages__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

@@ -67,7 +67,7 @@ a#scrollUp {
 *******Header CSS******
 **************************/
 #header {
-    position: absolute;
+    /*position: absolute;*/
     z-index: 10;
     width: 100%;
     background: white;
@@ -575,7 +575,7 @@ ul.sub-menu {
 ******* Home ******
 **************************/
 main {
-    padding-top: 23rem
+    /*padding-top: 23rem*/
 }
 
 /* Banner SLider */

@@ -20,9 +20,280 @@
     <link rel="stylesheet" href="~/resetCss/reset.css" />
 </head>
 <body>
-    <main role="main" class="pb-3" id="main">
+    <header id="header">
+        <div class="header_top">
+            <!--header_top-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="contactinfo">
+                            <ul class="nav nav-pills">
+                                <li><a href="#"><i class="fas fa-phone-alt"></i> +2 95 01 88 821</a></li>
+                                <li><a href="#"><i class="fa fa-envelope"></i> info@domain.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="social-icons pull-right">
+                            <ul class="nav navbar-nav flex-row">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
+                                <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/header_top-->
+
+        <div class="header-middle">
+            <!--header-middle-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="logo pull-left">
+                            <a asp-controller="Home" asp-action="Index"><img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/49555761_800325266979258_6985389871695134720_n.png?_nc_cat=101&ccb=2&_nc_sid=58c789&_nc_ohc=EkT4_Lov-TwAX8EJyYg&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=caab5681863e03c3f52c47a187ba4fa2&oe=603A7E2F" alt="" /></a>
+                        </div>
+                        <div class="btn-group pull-right">
+                        </div>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="shop-menu pull-right">
+                            <ul class="nav navbar-nav flex-row">
+                                <li><a href="#"><i class="fa fa-user"></i> Account</a></li>
+                                <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
+                                <li><a asp-controller="Home" asp-action="_Checkout"><i class="fa fa-crosshairs"></i> Checkout</a></li>
+                                <li><a href="/cart"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+                                <li><a asp-controller="Home" asp-action="Login_Register"><i class="fa fa-lock"></i>Login - Register</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/header-middle-->
+
+        <div class="header-bottom">
+            <!--header-bottom-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-9">
+                        <div class="navbar-header">
+                            @*<button type="button" class="navbar-toggle" data-toggle="collapse"
+                                        data-target=".navbar-collapse">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>*@
+                        </div>
+                        <div class="mainmenu pull-left">
+                            <ul class="nav navbar-nav collapse navbar-collapse">
+                                <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                                <li class="dropdown">
+                                    <a href="#">Shop<i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu">
+                                        <li><a asp-controller="Home" asp-action="_Product">Products</a></li>
+                                        @*<li><a href="#">Product Details</a></li>*@
+                                        <li><a asp-controller="Home" asp-action="_Checkout">Checkout</a></li>
+                                        <li><a href="/cart">Cart</a></li>
+                                        <li><a asp-controller="Home" asp-action="Login_Register"><i class="fa fa-lock"></i>Login - Register</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#">Blog<i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu">
+                                        <li><a href="blog-single.html">Blog Single</a></li>
+                                    </ul>
+                                </li>
+                                <li><a asp-controller="Home" asp-action="_AboutUs">About US</a></li>
+                                <li><a asp-controller="Home" asp-action="_ContactUs">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="search_box pull-right">
+                            <input type="text" placeholder="Search" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/header-bottom-->
+    </header>
+    <!--/header-->
+    <main role="main" class="pb-3">
         @RenderBody()
     </main>
+    @* Footer *@
+    <!--/Footer-->
+    <footer id="footer">
+        <!--Footer-->
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="companyinfo">
+                            <h2><span>e</span>-shopper</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-7">
+                        <div class="col-sm-3">
+                            <div class="video-gallery text-center">
+                                <a href="#">
+                                    <div class="iframe-img">
+                                        <img src="https://scontent.fhan2-3.fna.fbcdn.net/v/t1.15752-9/101859420_555857478388632_2543768860083879936_n.png?_nc_cat=108&ccb=2&_nc_sid=ae9488&_nc_ohc=b-eJpOulZBcAX9GIEnC&_nc_ht=scontent.fhan2-3.fna&oh=339ba981218c64e4ea31f87f17e85f4d&oe=60381596" alt="" />
+                                    </div>
 
+                                </a>
+                                <p>Circle of Hands</p>
+                                <h2>24 DEC 2014</h2>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <div class="video-gallery text-center">
+                                <a href="#">
+                                    <div class="iframe-img">
+                                        <img src="https://scontent.fhan2-3.fna.fbcdn.net/v/t1.15752-9/101859420_555857478388632_2543768860083879936_n.png?_nc_cat=108&ccb=2&_nc_sid=ae9488&_nc_ohc=b-eJpOulZBcAX9GIEnC&_nc_ht=scontent.fhan2-3.fna&oh=339ba981218c64e4ea31f87f17e85f4d&oe=60381596" alt="" />
+                                    </div>
+
+                                </a>
+                                <p>Circle of Hands</p>
+                                <h2>24 DEC 2014</h2>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <div class="video-gallery text-center">
+                                <a href="#">
+                                    <div class="iframe-img">
+                                        <img src="https://scontent.fhan2-3.fna.fbcdn.net/v/t1.15752-9/101859420_555857478388632_2543768860083879936_n.png?_nc_cat=108&ccb=2&_nc_sid=ae9488&_nc_ohc=b-eJpOulZBcAX9GIEnC&_nc_ht=scontent.fhan2-3.fna&oh=339ba981218c64e4ea31f87f17e85f4d&oe=60381596" alt="" />
+                                    </div>
+
+                                </a>
+                                <p>Circle of Hands</p>
+                                <h2>24 DEC 2014</h2>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <div class="video-gallery text-center">
+                                <a href="#">
+                                    <div class="iframe-img">
+                                        <img src="https://scontent.fhan2-3.fna.fbcdn.net/v/t1.15752-9/101859420_555857478388632_2543768860083879936_n.png?_nc_cat=108&ccb=2&_nc_sid=ae9488&_nc_ohc=b-eJpOulZBcAX9GIEnC&_nc_ht=scontent.fhan2-3.fna&oh=339ba981218c64e4ea31f87f17e85f4d&oe=60381596" alt="" />
+                                    </div>
+
+                                </a>
+                                <p>Circle of Hands</p>
+                                <h2>24 DEC 2014</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="address">
+                            <img src="images/home/map.png" alt="" />
+                            <p>505 S Atlantic Ave Virginia Beach, VA(Virginia)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-widget">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="single-widget">
+                            <h2>Service</h2>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a href="#">Online Help</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="#">Order Status</a></li>
+                                <li><a href="#">Change Location</a></li>
+                                <li><a href="#">FAQ’s</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="single-widget">
+                            <h2>Quock Shop</h2>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a href="#">T-Shirt</a></li>
+                                <li><a href="#">Mens</a></li>
+                                <li><a href="#">Womens</a></li>
+                                <li><a href="#">Gift Cards</a></li>
+                                <li><a href="#">Shoes</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="single-widget">
+                            <h2>Policies</h2>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a href="#">Terms of Use</a></li>
+                                <li><a href="#">Privecy Policy</a></li>
+                                <li><a href="#">Refund Policy</a></li>
+                                <li><a href="#">Billing System</a></li>
+                                <li><a href="#">Ticket System</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="single-widget">
+                            <h2>About Shopper</h2>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a href="#">Company Information</a></li>
+                                <li><a href="#">Careers</a></li>
+                                <li><a href="#">Store Location</a></li>
+                                <li><a href="#">Affillate Program</a></li>
+                                <li><a href="#">Copyright</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-sm-offset-1">
+                        <div class="single-widget">
+                            <h2>About Shopper</h2>
+                            <form action="#" class="searchform">
+                                <div class="d-flex">
+                                    <input type="text" placeholder="Your email address" />
+                                    <button type="submit" class="btn btn-default">
+                                        <i class="fas fa-arrow-circle-right"></i>
+                                    </button>
+                                </div>
+                                <p>Get the most recent updates from <br />our site and be updated your self...</p>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container py-3">
+                &copy; 2021 - MADAM_Boutique - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </div>
+        </div>
+
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script src="/js/contact.js"></script>
+    @*<script src="/js/gmaps.js"></script>*@
+    <script src="/js/html5shiv.js"></script>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/price-range.js"></script>
+    <script src="/js/jquery.prettyPhoto.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/jquery.scrollUp.min.js"></script>
 </body>
 </html>

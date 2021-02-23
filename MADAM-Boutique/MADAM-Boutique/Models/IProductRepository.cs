@@ -9,7 +9,6 @@ namespace MADAM_Boutique.Models
     public interface IProductRepository
     {
         IQueryable<Product> Products { get; }
-
     }
     
 }
