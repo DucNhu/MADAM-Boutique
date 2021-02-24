@@ -71,13 +71,11 @@ namespace MADAM_Boutique.Controllers
         }
 
 
-        // Delete Product in Cart
-        //public IActionResult Delete(int id)
-        //{
-        //    var b = _service.Get(id);
-        //    if (b == null) return NotFound();
-        //    else return View(b);
-        //}
+        public IActionResult admin()
+        {
+            return View();
+        }
+
 
         [HttpPost]
         public IActionResult Delete(Product product)

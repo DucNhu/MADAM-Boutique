@@ -74,6 +74,12 @@ namespace MADAM_Boutique
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
 
+                // Admin route
+                endpoints.MapControllerRoute("Admin",
+                   "Admin/",
+                   new { Controller = "Admin", action = "Index", productId = 1 });
+
+
                 endpoints.MapControllerRoute("productDetail",
                     "productDetail/{productId:int}",
                     new { Controller = "Home", action = "_ProductDetail", productId = 1 });

@@ -1,7 +1,7 @@
 ﻿@model ProductsListViewModel
-@* Slider *@
-
-
+@* Header *@
+<partial name="_Header" />
+@*Slide*@
 <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -100,7 +100,7 @@
 
                         @foreach (var product in Model.Products)
                         {
-                    <partial name="components/ProductSummary" model="product" />}
+            <partial name="components/ProductSummary" model="product" />}
 
                         <div page-model="@Model.PagingInfo" page-action="Index" class="col-12 box-pageLink btn-group"
                              Page-Classes-Enabled="true" Page-Class="bg-secondary text-white p-3 border rounded"
@@ -557,3 +557,6 @@
 </div>
 
 
+@* Footer *@
+<partial name="_Footer" />
+<!--/Footer-->

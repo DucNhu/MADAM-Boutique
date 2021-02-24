@@ -1,0 +1,104 @@
+﻿<header id="header">
+    <div class="header_top">
+        <!--header_top-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="contactinfo">
+                        <ul class="nav nav-pills">
+                            <li><a href="#"><i class="fas fa-phone-alt"></i> +2 95 01 88 821</a></li>
+                            <li><a href="#"><i class="fa fa-envelope"></i> info@domain.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="social-icons pull-right">
+                        <ul class="nav navbar-nav flex-row">
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
+                            <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/header_top-->
+
+    <div class="header-middle">
+        <!--header-middle-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="logo pull-left">
+                        <a asp-controller="Home" asp-action="Index"><img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/49555761_800325266979258_6985389871695134720_n.png?_nc_cat=101&ccb=2&_nc_sid=58c789&_nc_ohc=EkT4_Lov-TwAX8EJyYg&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=caab5681863e03c3f52c47a187ba4fa2&oe=603A7E2F" alt="" /></a>
+                    </div>
+                    <div class="btn-group pull-right">
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <div class="shop-menu pull-right">
+                        <ul class="nav navbar-nav flex-row">
+                            <li><a href="#"><i class="fa fa-user"></i> Account</a></li>
+                            <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
+                            <li><a asp-controller="Home" asp-action="_Checkout"><i class="fa fa-crosshairs"></i> Checkout</a></li>
+                            <li><a href="/cart"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+                            <li><a asp-controller="Home" asp-action="Login_Register"><i class="fa fa-lock"></i>Login - Register</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/header-middle-->
+
+    <div class="header-bottom">
+        <!--header-bottom-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9">
+                    <div class="navbar-header">
+                        @*<button type="button" class="navbar-toggle" data-toggle="collapse"
+                                    data-target=".navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>*@
+                    </div>
+                    <div class="mainmenu pull-left">
+                        <ul class="nav navbar-nav collapse navbar-collapse">
+                            <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                            <li class="dropdown">
+                                <a href="#">Shop<i class="fa fa-angle-down"></i></a>
+                                <ul role="menu" class="sub-menu">
+                                    <li><a asp-controller="Home" asp-action="_Product">Products</a></li>
+                                    @*<li><a href="#">Product Details</a></li>*@
+                                    <li><a asp-controller="Home" asp-action="_Checkout">Checkout</a></li>
+                                    <li><a href="/cart">Cart</a></li>
+                                    <li><a asp-controller="Home" asp-action="Login_Register"><i class="fa fa-lock"></i>Login - Register</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#">Blog<i class="fa fa-angle-down"></i></a>
+                                <ul role="menu" class="sub-menu">
+                                    <li><a href="blog-single.html">Blog Single</a></li>
+                                </ul>
+                            </li>
+                            <li><a asp-controller="Home" asp-action="_AboutUs">About US</a></li>
+                            <li><a asp-controller="Home" asp-action="_ContactUs">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="search_box pull-right">
+                        <input type="text" placeholder="Search" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/header-bottom-->
+</header>
