@@ -11,7 +11,7 @@
             </ol>
         </div>
         <div class="table-responsive cart_info">
-            <table class="table table-condensed">
+            <table class="table table-condensed position-relative">
                 <thead>
                     <tr class="cart_menu">
                         <td class="image">Item</td>
@@ -25,7 +25,7 @@
                 <tbody>
                     @foreach (var line in Model.Cart.Lines)
                     {
-                        <tr>
+                        <tr class="item">
                             <td class="cart_product">
                                 <a href=""><img src="/images/shop/@line.Product.ImagePath" alt="@line.Product.ImagePath" width="110" height="110"></a>
                             </td>
@@ -48,19 +48,24 @@
                                 <p class="cart_total_price">@((line.Quantity * line.Product.UnitPrice).ToString("c"))</p>
                             </td>
                             <td class="cart_delete">
-                                <form  asp-page="/Cart" method="post">
+                                <form asp-page="/RemoveLine" method="post">
                                     <input type="hidden" asp-for="@line.Product" />
                                     <button type="submit" class="btn cart_quantity_delete">
-                                        <i class="fa fa-times"></i>
-                                    </button> |
+                                        <i class="far fa-trash-alt"></i>
+                                    </button>
                                 </form>
-                                
+
                             </td>
                         </tr>
                     }
-
+                    <tr class="box-pay">
+                        <td>
+                            <a href="/pay">Pay Now</a>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
+
         </div>
     </div>
 </section> <!--/#cart_items-->

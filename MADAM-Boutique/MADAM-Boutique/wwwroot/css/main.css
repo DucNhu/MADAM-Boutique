@@ -21,7 +21,9 @@ a:hover {
     outline: none;
     text-decoration: none;
 }
-
+.position-relative {
+    position: relative
+}
 a:focus {
     outline: none;
     outline-offset: 0;
@@ -62,7 +64,9 @@ a#scrollUp {
         font-size: 30px;
     }
 
-
+.cart_quantity_delete {
+    border: none
+}
 /*************************
 *******Header CSS******
 **************************/
@@ -964,6 +968,31 @@ h2.title {
     }
 
 
+/*Cart*/
+.box-pay {
+    display: none;
+    position: absolute;
+    right: 1.5%;
+    border: 1px solid orange;
+    border-radius: 10px;
+    background: white;
+    bottom: 5px;
+    box-shadow: 0px 0px 5px orange;
+}
+.box-pay a{
+    color: black;
+}
+.box-pay:hover {
+    background: orange
+}
+    .box-pay:hover a{
+        color: white
+    }
+.item + .box-pay {
+    display: block
+}
+
+
 
 .add-to-cart {
     background: #F5F5ED;
@@ -977,7 +1006,6 @@ h2.title {
 
     .add-to-cart:hover {
         background: #FE980F;
-        border: 0 none;
         border-radius: 0;
         color: #FFFFFF;
     }

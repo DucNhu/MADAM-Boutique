@@ -12,5 +12,9 @@ namespace MADAM_Boutique.Controllers
         {
             return View();
         }
+        public IActionResult productControll()
+        {
+            return View();
+        }
     }
 }

@@ -70,13 +70,6 @@ namespace MADAM_Boutique.Controllers
             return View();
         }
 
-
-        public IActionResult admin()
-        {
-            return View();
-        }
-
-
         [HttpPost]
         public IActionResult Delete(Product product)
         {
