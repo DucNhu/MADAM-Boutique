@@ -8,6 +8,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using MADAM_Boutique.Models.ViewModels;
+using MADAM_Boutique.Infrastructure;
 
 namespace MADAM_Boutique.Controllers
 {
@@ -15,7 +16,7 @@ namespace MADAM_Boutique.Controllers
     {
         private readonly IProductRepository _productRepository;
         public int PageSize = 4;
-        private readonly Cart _service;
+        private  Cart _service;
 
         public HomeController(IProductRepository productRepository)
         {
@@ -71,9 +72,10 @@ namespace MADAM_Boutique.Controllers
         }
 
         [HttpPost]
-        public IActionResult Delete(Product product)
+        public IActionResult Delete(long productID)
         {
-            _service.RemoveLine(product);
+            _service = HttpContext.Session.GetJson<Cart>("cart") ?? new Cart();
+            _service.RemoveLine(productID);
             return RedirectToAction("Index");
         }
 

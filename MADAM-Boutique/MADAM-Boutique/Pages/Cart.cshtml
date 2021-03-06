@@ -48,8 +48,8 @@
                                 <p class="cart_total_price">@((line.Quantity * line.Product.UnitPrice).ToString("c"))</p>
                             </td>
                             <td class="cart_delete">
-                                <form asp-page="/RemoveLine" method="post">
-                                    <input type="hidden" asp-for="@line.Product" />
+                                <form action="Home/Delete/?productID=@line.Product.ProductID"  method="post">
+                                    <input type="hidden" asp-for="@line.Product" name="@line.Product" />
                                     <button type="submit" class="btn cart_quantity_delete">
                                         <i class="far fa-trash-alt"></i>
                                     </button>
