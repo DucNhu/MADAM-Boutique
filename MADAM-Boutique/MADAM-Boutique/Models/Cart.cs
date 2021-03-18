@@ -28,8 +28,20 @@ namespace MADAM_Boutique.Models
                 line.Quantity += quantity;
             }
         }
-        public void RemoveLine(long productID) =>
-            Lines.RemoveAll(l => l.Product.ProductID == productID);
+        public void RemoveLine(int index) =>
+         Lines.RemoveAt(index);
+
+        public int isExist(long id)
+        {
+            for (int i = 0; i < Lines.Count; i++)
+            {
+                if (Lines[i].Product.ProductID.Equals(id))
+                {
+                    return i;
+                }
+            }
+            return -1;
+        }
 
         public double ComputetTotalValue() =>
             Lines.Sum(e => e.Product.UnitPrice * e.Quantity);

@@ -75,31 +75,35 @@ namespace MADAM_Boutique
                     pattern: "{controller=Home}/{action=Index}/{id?}");
 
                 // Admin route
-                endpoints.MapControllerRoute("Admin",
-                   "Admin/",
-                   new { Controller = "Admin", action = "Index", productId = 1 });
+                endpoints.MapControllerRoute(
+                   name: "admin",
+                   pattern: "{controller=Admin}/{action=Index}/{id?}");
 
+                endpoints.MapControllerRoute("productDetail",
+                   "Admin/Detail/{productId:long}",
+                   new { Controller = "Admin", action = "Details", productId = 1 });
 
                 endpoints.MapControllerRoute("productDetail",
                     "productDetail/{productId:int}",
                     new { Controller = "Home", action = "_ProductDetail", productId = 1 });
 
                 endpoints.MapControllerRoute("catepage",
-            "{category}/Page{productPage:int}",
-            new { Controller = "Home", action = "Index", x = 1 });
+                    "{category}/Page{productPage:int}",
+                    new { Controller = "Home", action = "Index", x = 1 });
 
 
                 endpoints.MapControllerRoute("page",
-                "Page{productPage:int}",
-                new { Controller = "Home", action = "Index", x = 1 });
+                    "Page{productPage:int}",
+                    new { Controller = "Home", action = "Index", x = 1 });
 
                 endpoints.MapControllerRoute("pagination",
-                "Product/Page{productPage}",
-                new { Controller = "Home", action = "Index", x = 1 });
+                    "Product/Page{productPage}",
+                    new { Controller = "Home", action = "Index", x = 1 });
 
                 endpoints.MapDefaultControllerRoute();
                 endpoints.MapRazorPages();
             });
+
             SeedData.EnsurePopulated(app);
         }
     }

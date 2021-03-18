@@ -61,7 +61,6 @@ namespace MADAM_Boutique.Controllers
         }
 
 
-
         public IActionResult _Product()
         {
             return View();
@@ -72,20 +71,21 @@ namespace MADAM_Boutique.Controllers
         }
 
         [HttpPost]
-        public IActionResult Delete(long productID)
+        public IActionResult Delete(Product pro)
         {
-            _service = HttpContext.Session.GetJson<Cart>("cart") ?? new Cart();
-            _service.RemoveLine(productID);
+            _service = HttpContext.Session.GetJson<Cart>("cart");
+            int index = _service.isExist(pro.ProductID);
+            _service.RemoveLine(index);
+            HttpContext.Session.SetJson("cart", _service);
             return RedirectToAction("Index");
         }
 
 
         public IActionResult _ProductDetail(Product product)
         {
-            var test = _productRepository.Products.Where(p => p.ProductID == product.ProductID).FirstOrDefault();
-            return View(test);
+            var productDetail = _productRepository.Products.Where(p => p.ProductID == product.ProductID).FirstOrDefault();
+            return View(productDetail);
         }
-
 
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

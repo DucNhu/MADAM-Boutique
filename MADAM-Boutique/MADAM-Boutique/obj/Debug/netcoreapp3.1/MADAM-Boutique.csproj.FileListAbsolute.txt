@@ -264,7 +264,6 @@ C:\Users\Pc\Documents\GitHub\ASP-NhuHoangMinhDuc\MADAM-Boutique\MADAM-Boutique\M
 C:\Users\Pc\Documents\GitHub\ASP-NhuHoangMinhDuc\MADAM-Boutique\MADAM-Boutique\MADAM-Boutique\obj\Debug\netcoreapp3.1\Razor\Pages\_ViewImports.cshtml.g.cs
 C:\Users\Pc\Documents\GitHub\ASP-NhuHoangMinhDuc\MADAM-Boutique\MADAM-Boutique\MADAM-Boutique\obj\Debug\netcoreapp3.1\Razor\Pages\_ViewStart.cshtml.g.cs
 C:\Users\Pc\Documents\GitHub\ASP-NhuHoangMinhDuc\MADAM-Boutique\MADAM-Boutique\MADAM-Boutique\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Index.cshtml.g.cs
-C:\Users\Pc\Documents\GitHub\ASP-NhuHoangMinhDuc\MADAM-Boutique\MADAM-Boutique\MADAM-Boutique\obj\Debug\netcoreapp3.1\Razor\Views\Admin\productControll.cshtml.g.cs
 C:\Users\Pc\Documents\GitHub\ASP-NhuHoangMinhDuc\MADAM-Boutique\MADAM-Boutique\MADAM-Boutique\obj\Debug\netcoreapp3.1\Razor\Views\Admin\_Footer.cshtml.g.cs
 C:\Users\Pc\Documents\GitHub\ASP-NhuHoangMinhDuc\MADAM-Boutique\MADAM-Boutique\MADAM-Boutique\obj\Debug\netcoreapp3.1\Razor\Views\Admin\_header.cshtml.g.cs
 C:\Users\Pc\Documents\GitHub\ASP-NhuHoangMinhDuc\MADAM-Boutique\MADAM-Boutique\MADAM-Boutique\obj\Debug\netcoreapp3.1\Razor\Views\Home\Components\NavigationMenu\default.cshtml.g.cs
@@ -404,3 +403,6 @@ C:\FPT-Aptech\Github\Projects\MADAM-Boutique\MADAM-Boutique\MADAM-Boutique\obj\D
 C:\FPT-Aptech\Github\Projects\MADAM-Boutique\MADAM-Boutique\MADAM-Boutique\obj\Debug\netcoreapp3.1\MADAM-Boutique.dll
 C:\FPT-Aptech\Github\Projects\MADAM-Boutique\MADAM-Boutique\MADAM-Boutique\obj\Debug\netcoreapp3.1\MADAM-Boutique.pdb
 C:\FPT-Aptech\Github\Projects\MADAM-Boutique\MADAM-Boutique\MADAM-Boutique\obj\Debug\netcoreapp3.1\MADAM-Boutique.genruntimeconfig.cache
+C:\Users\Pc\Documents\GitHub\ASP-NhuHoangMinhDuc\MADAM-Boutique\MADAM-Boutique\MADAM-Boutique\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Details.cshtml.g.cs
+C:\Users\Pc\Documents\GitHub\ASP-NhuHoangMinhDuc\MADAM-Boutique\MADAM-Boutique\MADAM-Boutique\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Edit.cshtml.g.cs
+C:\Users\Pc\Documents\GitHub\ASP-NhuHoangMinhDuc\MADAM-Boutique\MADAM-Boutique\MADAM-Boutique\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Category.cshtml.g.cs
